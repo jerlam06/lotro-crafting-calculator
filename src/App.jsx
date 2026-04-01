@@ -247,7 +247,7 @@ function Bar({ value, max, color, label }) {
   const pct = Math.min(100, (value / max) * 100);
   return (
     <div style={{ marginBottom: 6 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#b8a67e", marginBottom: 3 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, color: "#b8a67e", marginBottom: 3 }}>
         <span>{label}</span><span>{value} / {max} XP</span>
       </div>
       <div style={{ height: 10, background: "#1a1611", borderRadius: 5, overflow: "hidden", border: "1px solid #3d3426" }}>
@@ -293,22 +293,22 @@ export default function App() {
     wrap: { minHeight: "100vh", background: "#0d0b08", color: "#d4c5a0", fontFamily: "'Palatino Linotype','Book Antiqua',Palatino,Georgia,serif", padding: "20px 12px" },
     hdr: { textAlign: "center", marginBottom: 28, borderBottom: "2px solid #3d3426", paddingBottom: 16 },
     sec: { background: "#15120d", border: "1px solid #2e2618", borderRadius: 8, padding: 16, marginBottom: 16 },
-    secT: { fontSize: 14, fontWeight: 700, color: "#c9a84c", marginBottom: 12, textTransform: "uppercase", letterSpacing: 1, borderBottom: "1px solid #2e2618", paddingBottom: 8 },
-    pBtn: a => ({ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 12px", margin: 3, background: a ? "#2a2010" : "transparent", border: `1px solid ${a ? "#c9a84c" : "#2e2618"}`, borderRadius: 6, color: a ? "#c9a84c" : "#8a7b5b", cursor: "pointer", fontSize: 12, fontFamily: "inherit" }),
-    tBtn: a => ({ display: "inline-block", padding: "5px 10px", margin: 2, background: a ? "#2a2010" : "transparent", border: `1px solid ${a ? "#c9a84c" : "#2e2618"}`, borderRadius: 4, color: a ? "#c9a84c" : "#6a5f4b", cursor: "pointer", fontSize: 11, fontFamily: "inherit", minWidth: 80, textAlign: "center" }),
-    inp: { background: "#0d0b08", border: "1px solid #3d3426", borderRadius: 4, color: "#d4c5a0", padding: "5px 8px", width: 70, fontSize: 13, fontFamily: "inherit", textAlign: "right" },
+    secT: { fontSize: 17, fontWeight: 700, color: "#c9a84c", marginBottom: 12, textTransform: "uppercase", letterSpacing: 1, borderBottom: "1px solid #2e2618", paddingBottom: 8 },
+    pBtn: a => ({ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 12px", margin: 3, background: a ? "#2a2010" : "transparent", border: `1px solid ${a ? "#c9a84c" : "#2e2618"}`, borderRadius: 6, color: a ? "#c9a84c" : "#8a7b5b", cursor: "pointer", fontSize: 15, fontFamily: "inherit" }),
+    tBtn: a => ({ display: "inline-block", padding: "5px 10px", margin: 2, background: a ? "#2a2010" : "transparent", border: `1px solid ${a ? "#c9a84c" : "#2e2618"}`, borderRadius: 4, color: a ? "#c9a84c" : "#6a5f4b", cursor: "pointer", fontSize: 14, fontFamily: "inherit", minWidth: 80, textAlign: "center" }),
+    inp: { background: "#0d0b08", border: "1px solid #3d3426", borderRadius: 4, color: "#d4c5a0", padding: "5px 8px", width: 70, fontSize: 16, fontFamily: "inherit", textAlign: "right" },
     card: { background: "#1a1611", border: "1px solid #2e2618", borderRadius: 6, padding: 14, marginBottom: 10 },
     tot: { background: "linear-gradient(135deg,#1f1a10,#2a2010)", border: "2px solid #c9a84c", borderRadius: 8, padding: 20, textAlign: "center", marginTop: 16 },
-    tag: { display: "inline-block", background: "#2a2010", border: "1px solid #3d3426", borderRadius: 3, padding: "2px 8px", fontSize: 10, color: "#b8a67e", marginRight: 4, marginBottom: 4 },
-    sav: { display: "inline-block", background: "#1a2a1a", border: "1px solid #3a5a3a", borderRadius: 3, padding: "2px 8px", fontSize: 10, color: "#6aaa6a", marginLeft: 6 },
-    smBtn: { background: "transparent", border: "1px solid #3d3426", borderRadius: 4, color: "#8a7b5b", padding: "4px 10px", fontSize: 10, cursor: "pointer", fontFamily: "inherit" },
+    tag: { display: "inline-block", background: "#2a2010", border: "1px solid #3d3426", borderRadius: 3, padding: "2px 8px", fontSize: 13, color: "#b8a67e", marginRight: 4, marginBottom: 4 },
+    sav: { display: "inline-block", background: "#1a2a1a", border: "1px solid #3a5a3a", borderRadius: 3, padding: "2px 8px", fontSize: 13, color: "#6aaa6a", marginLeft: 6 },
+    smBtn: { background: "transparent", border: "1px solid #3d3426", borderRadius: 4, color: "#8a7b5b", padding: "4px 10px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
   };
 
   return (
     <div style={S.wrap}>
       <div style={S.hdr}>
-        <h1 style={{ fontSize: 26, fontWeight: 700, color: "#c9a84c", letterSpacing: 1, margin: 0, textShadow: "0 2px 8px #00000088" }}>LOTRO Crafting Calculator</h1>
-        <div style={{ fontSize: 12, color: "#8a7b5b", marginTop: 4, letterSpacing: 2, textTransform: "uppercase" }}>Materials needed per profession & tier</div>
+        <h1 style={{ fontSize: 30, fontWeight: 700, color: "#c9a84c", letterSpacing: 1, margin: 0, textShadow: "0 2px 8px #00000088" }}>LOTRO Crafting Calculator</h1>
+        <div style={{ fontSize: 15, color: "#8a7b5b", marginTop: 4, letterSpacing: 2, textTransform: "uppercase" }}>Materials needed per profession & tier</div>
       </div>
 
       <div style={S.sec}>
@@ -316,11 +316,11 @@ export default function App() {
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {Object.entries(PROFESSIONS).map(([n, d]) => (
             <button key={n} style={S.pBtn(prof === n)} onClick={() => { setProf(n); setXP({}); }}>
-              <span style={{ fontSize: 16 }}>{d.icon}</span><span>{n}</span>
+              <span style={{ fontSize: 19 }}>{d.icon}</span><span>{n}</span>
             </button>
           ))}
         </div>
-        <div style={{ marginTop: 8, fontSize: 12, color: "#8a7b5b" }}>
+        <div style={{ marginTop: 8, fontSize: 15, color: "#8a7b5b" }}>
           {pd.icon} {pd.desc} — <span style={{ color: pd.type === "gathering" ? "#6aaa6a" : "#aa8a6a" }}>{pd.type}</span>
           {pd.processingType !== "none" && <span style={{ color: "#6aaa6a", marginLeft: 8 }}>⟳ has processing</span>}
         </div>
@@ -338,11 +338,11 @@ export default function App() {
 
       {hasProc && (
         <div style={S.sec}>
-          <label style={{ display: "flex", alignItems: "flex-start", gap: 8, cursor: "pointer", fontSize: 13 }}>
+          <label style={{ display: "flex", alignItems: "flex-start", gap: 8, cursor: "pointer", fontSize: 16 }}>
             <input type="checkbox" checked={useProc} onChange={e => setUseProc(e.target.checked)} style={{ accentColor: "#c9a84c", marginTop: 3 }} />
             <div>
               <div style={{ fontWeight: 600, color: "#c9a84c" }}>Use Processing Recipes (Traitement)</div>
-              <div style={{ fontSize: 11, color: "#8a7b5b", marginTop: 2 }}>
+              <div style={{ fontSize: 14, color: "#8a7b5b", marginTop: 2 }}>
                 {pd.processingType === "production"
                   ? "Available on ALL tiers. 2 refined → 4 shavings (8 XP) → reassemble 1 refined (8 XP). Net: 1 material consumed = 16 XP. Much more efficient than crafting items!"
                   : "T10+ only. Process refined materials into shavings and back to maximize XP per raw resource."}
@@ -361,9 +361,9 @@ export default function App() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))", gap: 8, marginTop: 8 }}>
             {TIERS.filter(t => selTiers.includes(t.id)).map(t => (
               <div key={t.id} style={{ background: "#0d0b08", border: "1px solid #2e2618", borderRadius: 6, padding: 10 }}>
-                <div style={{ fontSize: 12, fontWeight: 700, color: "#c9a84c", marginBottom: 6 }}>T{t.id} {t.name}</div>
+                <div style={{ fontSize: 15, fontWeight: 700, color: "#c9a84c", marginBottom: 6 }}>T{t.id} {t.name}</div>
                 {[["p", "Prof XP", "#b87333", t.prof], ["m", "Mastery XP", "#c9a84c", t.mastery]].map(([k, lbl, col, max]) => (
-                  <div key={k} style={{ display: "flex", alignItems: "center", fontSize: 11, marginTop: k === "m" ? 4 : 0 }}>
+                  <div key={k} style={{ display: "flex", alignItems: "center", fontSize: 14, marginTop: k === "m" ? 4 : 0 }}>
                     <span style={{ color: col, width: 72, display: "inline-block" }}>{lbl}:</span>
                     <input type="number" min={0} max={max} value={xp[`${t.id}-${k}`] || ""}
                       onChange={e => setXP(p => ({ ...p, [`${t.id}-${k}`]: Math.min(max, Math.max(0, parseInt(e.target.value) || 0)) }))}
@@ -385,14 +385,14 @@ export default function App() {
             <div key={r.tier.id} style={S.card}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
                 <div>
-                  <span style={{ fontWeight: 700, color: "#c9a84c", fontSize: 14 }}>T{r.tier.id} — {r.tier.name}</span>
-                  {r.method === "processing" && <span style={{ fontSize: 9, color: "#6aaa6a", marginLeft: 8, textTransform: "uppercase", letterSpacing: 1 }}>⟳ processing</span>}
-                  <div style={{ fontSize: 11, color: "#6a5f4b", marginTop: 2 }}>{pd.processingType === "production" ? r.td.refined : r.td.material}</div>
+                  <span style={{ fontWeight: 700, color: "#c9a84c", fontSize: 17 }}>T{r.tier.id} — {r.tier.name}</span>
+                  {r.method === "processing" && <span style={{ fontSize: 12, color: "#6aaa6a", marginLeft: 8, textTransform: "uppercase", letterSpacing: 1 }}>⟳ processing</span>}
+                  <div style={{ fontSize: 14, color: "#6a5f4b", marginTop: 2 }}>{pd.processingType === "production" ? r.td.refined : r.td.material}</div>
                 </div>
-                {r.skip ? <span style={{ fontSize: 11, color: "#6aaa6a", fontStyle: "italic" }}>Completed ✓</span> : (
+                {r.skip ? <span style={{ fontSize: 14, color: "#6aaa6a", fontStyle: "italic" }}>Completed ✓</span> : (
                   <div style={{ textAlign: "right" }}>
-                    <div style={{ fontSize: 18, fontWeight: 700, color: "#e8d5a3" }}>{r.mats.toLocaleString()}</div>
-                    <div style={{ fontSize: 10, color: "#8a7b5b" }}>{pd.processingType === "production" ? "refined materials" : "raw materials"}</div>
+                    <div style={{ fontSize: 22, fontWeight: 700, color: "#e8d5a3" }}>{r.mats.toLocaleString()}</div>
+                    <div style={{ fontSize: 13, color: "#8a7b5b" }}>{pd.processingType === "production" ? "refined materials" : "raw materials"}</div>
                     {saved && <div style={S.sav}>saves {(r.stdMats - r.mats).toLocaleString()} vs crafting items</div>}
                   </div>
                 )}
@@ -404,9 +404,9 @@ export default function App() {
                   <span style={S.tag}>{r.crafts} crafts</span>
                   {r.method === "processing" ? <span style={S.tag}>16 XP/cycle</span> : <><span style={S.tag}>{r.td.xpPerCraft} XP/craft</span><span style={S.tag}>{r.td.matPerCraft} mat/craft</span></>}
                 </div>
-                {r.note && <div style={{ fontSize: 10, color: "#6aaa6a", marginTop: 6, fontStyle: "italic", lineHeight: 1.5 }}>{r.note}</div>}
-                <div style={{ fontSize: 10, color: "#6a5f4b", marginTop: 4 }}>Locations: {r.td.locations}</div>
-                {r.td.note && <div style={{ fontSize: 10, color: "#8a7b5b", marginTop: 2, fontStyle: "italic" }}>{r.td.note}</div>}
+                {r.note && <div style={{ fontSize: 13, color: "#6aaa6a", marginTop: 6, fontStyle: "italic", lineHeight: 1.5 }}>{r.note}</div>}
+                <div style={{ fontSize: 13, color: "#6a5f4b", marginTop: 4 }}>Locations: {r.td.locations}</div>
+                {r.td.note && <div style={{ fontSize: 13, color: "#8a7b5b", marginTop: 2, fontStyle: "italic" }}>{r.td.note}</div>}
               </>)}
             </div>
           );
@@ -414,17 +414,17 @@ export default function App() {
 
         {res.rows.length > 0 && (
           <div style={S.tot}>
-            <div style={{ fontSize: 11, color: "#8a7b5b", textTransform: "uppercase", letterSpacing: 2, marginBottom: 6 }}>Grand Total — {prof}</div>
-            <div style={{ fontSize: 36, fontWeight: 700, color: "#c9a84c", lineHeight: 1 }}>{res.totMats.toLocaleString()}</div>
-            <div style={{ fontSize: 12, color: "#b8a67e", marginTop: 4 }}>{pd.processingType === "production" ? "refined materials needed" : "raw materials needed"}</div>
-            <div style={{ fontSize: 13, color: "#8a7b5b", marginTop: 8 }}>
+            <div style={{ fontSize: 14, color: "#8a7b5b", textTransform: "uppercase", letterSpacing: 2, marginBottom: 6 }}>Grand Total — {prof}</div>
+            <div style={{ fontSize: 42, fontWeight: 700, color: "#c9a84c", lineHeight: 1 }}>{res.totMats.toLocaleString()}</div>
+            <div style={{ fontSize: 15, color: "#b8a67e", marginTop: 4 }}>{pd.processingType === "production" ? "refined materials needed" : "raw materials needed"}</div>
+            <div style={{ fontSize: 16, color: "#8a7b5b", marginTop: 8 }}>
               {res.totCrafts.toLocaleString()} total crafts across {res.rows.filter(r => !r.skip).length} tier{res.rows.filter(r => !r.skip).length !== 1 ? "s" : ""}
             </div>
           </div>
         )}
       </div>
 
-      <div style={{ fontSize: 10, color: "#4a4232", textAlign: "center", marginTop: 20, lineHeight: 1.6, padding: "0 10px" }}>
+      <div style={{ fontSize: 13, color: "#4a4232", textAlign: "center", marginTop: 20, lineHeight: 1.6, padding: "0 10px" }}>
         Processing (Traitement): Jeweller, Metalsmith, Tailor, Weaponsmith & Woodworker — all tiers.
         Prospector & Forester — T10+ only.
         <br/>Mechanic: 2 refined → 4 shavings (8 XP) → 4 shavings → 1 refined (8 XP). Net: 1 consumed, 16 XP gained.
